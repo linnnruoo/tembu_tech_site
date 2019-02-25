@@ -1,10 +1,12 @@
 import React from 'react';
+import Banner from '../components/Banner';
+import home from '../images/home.png';
 
 const Home = () => {
   return (
-    <div>
-
-    </div>
+    <>
+      <Banner bannerImg={home} /> 
+    </>
   )
 }
 

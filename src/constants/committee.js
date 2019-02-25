@@ -1,46 +1,68 @@
-import boston from '../images/boston.jpg';
-import kabir from '../images/kabir.jpg';
-import linruo from '../images/linruo.jpg';
-import qiheng from '../images/qiheng.jpg';
-import rajesh from '../images/Rajesh.jpg';
-import sylvester from '../images/sylvester.jpg';
-import windrich from '../images/windrich.jpg';
+import boston from '../images/team/boston.jpg';
+import kabir from '../images/team/kabir.jpg';
+import linruo from '../images/team/linruo.jpg';
+import qiheng from '../images/team/qiheng.jpg';
+import rajesh from '../images/team/Rajesh.jpg';
+import sylvester from '../images/team/sylvester.jpg';
+import windrich from '../images/team/windrich.jpg';
+import kokchung from '../images/team/kokchung.jpg'
 
 const committee = [
   {
     name: 'Boston',
+    email: '',
+    github: '',
     desc: '',
-    url: {boston},
+    url: boston,
   },
   {
     name: 'Kabir',
+    email: '',
+    github: '',
     desc: '',
-    url: {kabir},
+    url: kabir,
+  },
+  {
+    name: 'Kok Chung',
+    email: '',
+    github: '',
+    desc: '',
+    url: kokchung,
   },
   {
     name: 'Lin Ruo',
+    email: 'linruolynn@gmail.com',
+    github: '',
     desc: '',
-    url: {linruo},
+    url: linruo,
   },
   {
     name: 'Qi Heng',
+    email: '',
+    github: '',
     desc: '',
-    url: {qiheng},
+    url: qiheng,
   },
   {
     name: 'Rajesh',
+    email: '',
+    github: '',
     desc: '',
-    url: {rajesh},
+    url: rajesh,
   },
   {
     name: 'Sylvester',
+    email: 'chunhongwei.chw@gmail.com',
+    github: '',
     desc: '',
-    url: {sylvester},
+    url: sylvester,
   }, 
   {
     name: 'Windrich',
+    email: '',
+    github: '',
     desc: '',
-    url: {windrich},
+    url: windrich,
   },
 ];
 

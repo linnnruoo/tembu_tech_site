@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Project from './pages/Project';
 import Talk from './pages/Talk';
 import Workshop from './pages/Workshop';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path="/project" component={Project} />
           <Route exact path="/talk" component={Talk} />
           <Route exact path="/committee" component={Committee} />
+          <Footer />
         </div>
       </Router>
     );
