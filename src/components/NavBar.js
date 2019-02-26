@@ -9,6 +9,7 @@ import {
     NavItem,
 } from 'reactstrap';
 import Typography from '@material-ui/core/Typography';
+import logo from '../images/circuit_tree.svg';
 import '../styles/Nav.css';
 
 class Nav extends Component {
@@ -26,11 +27,11 @@ class Nav extends Component {
   }
   render() {
     return (
-      <Scrollspy items={['workshop', 'committee']} currentClassName="is-current">
+      <Scrollspy items={['home', 'workshop', 'project', 'talk', 'committee', 'gallery']} currentClassName="is-current">
         <Navbar id="navbar" expand="sm" fixed="top" className="flex-shrink-0">
-          <NavbarBrand href="/" className="d-flex w-50 mr-auto">
+          <NavbarBrand href="#home" className="d-flex w-50 mr-auto">
             {/* <img src={logo} alt="Tembusu Tech" className="nav-logo" /> */}
-            {/* <Typography color="primary">Tembusu Tech</Typography> */}
+            <Typography color="primary">Tembusu Technologies</Typography>
           </NavbarBrand>
           <NavbarToggler onClick={this._toggle} className={this.state.isOpen ? '': 'collapsed'}>
             <span className="icon-bar top-bar"></span>
@@ -41,7 +42,7 @@ class Nav extends Component {
           <Collapse isOpen={this.state.isOpen} navbar className="w-100">
             <NavStrap className="ml-auto w-100 justify-content-end" navbar>
               <NavItem className="nav-item">
-                <a href="/">
+                <a href="#home">
                   <Typography color="primary">Home</Typography>
                 </a>
               </NavItem>
@@ -51,18 +52,23 @@ class Nav extends Component {
                 </a>
               </NavItem>
               <NavItem className="nav-item">
-                <a href="/project">
+                <a href="#project">
                   <Typography color="primary">Project</Typography>
                 </a>
               </NavItem>
               <NavItem className="nav-item">
-                <a href="/talk">
+                <a href="#talk">
                   <Typography color="primary">Talk</Typography>
                 </a>
               </NavItem>
               <NavItem className="nav-item">
                 <a href="#committee">
                   <Typography color="primary">Committee</Typography>
+                </a>
+              </NavItem>
+              <NavItem className="nav-item">
+                <a href="#gallery">
+                  <Typography color="primary">Gallery</Typography>
                 </a>
               </NavItem>
             </NavStrap>

@@ -10,7 +10,7 @@ const PersonCard = ({ classes, name, desc, url }) => {
       <img className={classes.image} src={url} alt={name} />
       <CardContent>
         <Typography variant="h6">{name}</Typography>
-        <Typography paragraph>lorem ipsum</Typography>
+        <Typography paragraph>{desc}</Typography>
       </CardContent>
     </Card>
   )

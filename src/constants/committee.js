@@ -12,7 +12,7 @@ const committee = [
     name: 'Boston',
     email: '',
     github: '',
-    desc: '',
+    desc: 'A CS student who likes to show off his muscles',
     url: boston,
   },
   {
@@ -33,7 +33,7 @@ const committee = [
     name: 'Lin Ruo',
     email: 'linruolynn@gmail.com',
     github: '',
-    desc: '',
+    desc: 'A CEG student who has shifted her interest to pure CS',
     url: linruo,
   },
   {

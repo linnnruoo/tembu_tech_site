@@ -14,7 +14,7 @@ import Workshop from './pages/Workshop';
 const theme = createMuiTheme({
   palette: {
     primary: { main: '#75b49e' },
-    secondary: { main: '#5CDB95' },
+    secondary: { main: '#2b7a78' },
   },
   typography: { fontFamily: '"Titillium Web", sans-serif' },
 })

@@ -17,6 +17,12 @@ nav {
 	margin-top: 4px
 }
 
+.nav-logo {
+  height: 30px;
+  margin-top: 0px;
+  cursor: pointer
+}
+
 .nav-item {
   margin: 5px;
   text-align: center;

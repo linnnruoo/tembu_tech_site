@@ -5,10 +5,12 @@ import committee from '../constants/committee';
 import PersonCard from '../components/PersonCard';
 import GridContainer from '../components/GridContainer';
 import GridItem from '../components/GridItem';
+import Section from '../components/Section';
 
 const Committee = () => {
   return (
-    <>
+    <section>
+      <Section text="Committee" />
       <Banner bannerImg={team} />
       <div className="container mt-5">
         <GridContainer spacing={8}>
@@ -21,7 +23,7 @@ const Committee = () => {
           })}
         </GridContainer>
       </div>
-    </>
+    </section>
   )
 }
 
