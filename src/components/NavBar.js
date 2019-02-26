@@ -1,38 +1,61 @@
-import React  from 'react';
-import Nav from 'react-bootstrap/Nav';
+import React, { Component } from 'react';
+import { NavLink as Link } from 'react-router-dom';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav as NavStrap,
+    NavItem,
+    NavLink
+} from 'reactstrap';
+import '../styles/Nav.css';
 
-import Navbar from 'react-bootstrap/Navbar';
-import DeleteIcon from '@material-ui/icons/Delete'
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+    this._toggle = this._toggle.bind(this);
+  }
+  _toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
+    return (
+      <Navbar expand="md" color="dark" dark fixed="top" className="flex-shrink-0">
+        <NavbarBrand tag={Link} to="/" className="d-flex w-50 mr-auto">Tembusu Tech</NavbarBrand>
+        <NavbarToggler onClick={this._toggle} className={this.state.isOpen ? '': 'collapsed'}>
+          <span className="icon-bar top-bar"></span>
+	        <span className="icon-bar middle-bar"></span>
+	        <span className="icon-bar bottom-bar"></span>
+        </NavbarToggler>
 
-const NavBar = () => {
-  return (
-    <>
-      <Navbar expand="lg" fixed="top" bg="dark">
-        <Navbar.Brand href="/home">Tembusu Tech</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="justify-content-end">
-            <Nav.Item>
-              <Nav.Link href="/home">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/workshop">Workshop</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/project">Project</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/talk">Talk</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/committee">Committee</Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
+        <Collapse isOpen={this.state.isOpen} navbar className="w-100">
+          <NavStrap className="ml-auto w-100 justify-content-end" navbar>
+            <NavItem>
+              <NavLink tag={Link} exact to="/">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="/workshop">Workshop</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="/project">Project</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="/talk">Talk</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="#committee">Committee</NavLink>
+            </NavItem>
+          </NavStrap>
+        </Collapse>
       </Navbar>
-    </>
-  )
+    );
+  }
 }
 
-export default NavBar;
+export default Nav;
