@@ -1,12 +1,21 @@
 import React from 'react';
-import Banner from '../components/Banner';
-import home from '../images/home.png';
+import Gallery from 'react-photo-gallery';
+import Header from '../components/Header';
+import gallery from '../constants/gallery';
+import Committee from './Committee';
 
 const Home = () => {
   return (
-    <>
-      <Banner bannerImg={home} /> 
-    </>
+    <div>
+      <Header />
+      
+      <div className="mt-5" id="workshop">
+        <Gallery photos={gallery} />
+      </div>
+      <div id="committee">
+        <Committee />
+      </div>
+    </div>
   )
 }
 

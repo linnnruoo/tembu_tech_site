@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 const PersonCard = ({ classes, name, desc, url }) => {
   return (
     <Card className={classes.card}>
-      <img className={classes.image} src={url} />
+      <img className={classes.image} src={url} alt={name} />
       <CardContent>
         <Typography variant="h6">{name}</Typography>
         <Typography paragraph>lorem ipsum</Typography>

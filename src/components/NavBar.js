@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink as Link } from 'react-router-dom';
+import Scrollspy from 'react-scrollspy'
 import {
     Collapse,
     Navbar,
@@ -7,8 +7,8 @@ import {
     NavbarBrand,
     Nav as NavStrap,
     NavItem,
-    NavLink
 } from 'reactstrap';
+import Typography from '@material-ui/core/Typography';
 import '../styles/Nav.css';
 
 class Nav extends Component {
@@ -26,34 +26,49 @@ class Nav extends Component {
   }
   render() {
     return (
-      <Navbar expand="md" color="dark" dark fixed="top" className="flex-shrink-0">
-        <NavbarBrand tag={Link} to="/" className="d-flex w-50 mr-auto">Tembusu Tech</NavbarBrand>
-        <NavbarToggler onClick={this._toggle} className={this.state.isOpen ? '': 'collapsed'}>
-          <span className="icon-bar top-bar"></span>
-	        <span className="icon-bar middle-bar"></span>
-	        <span className="icon-bar bottom-bar"></span>
-        </NavbarToggler>
+      <Scrollspy items={['workshop', 'committee']} currentClassName="is-current">
+        <Navbar id="navbar" expand="sm" fixed="top" className="flex-shrink-0">
+          <NavbarBrand href="/" className="d-flex w-50 mr-auto">
+            {/* <img src={logo} alt="Tembusu Tech" className="nav-logo" /> */}
+            {/* <Typography color="primary">Tembusu Tech</Typography> */}
+          </NavbarBrand>
+          <NavbarToggler onClick={this._toggle} className={this.state.isOpen ? '': 'collapsed'}>
+            <span className="icon-bar top-bar"></span>
+            <span className="icon-bar middle-bar"></span>
+            <span className="icon-bar bottom-bar"></span>
+          </NavbarToggler>
 
-        <Collapse isOpen={this.state.isOpen} navbar className="w-100">
-          <NavStrap className="ml-auto w-100 justify-content-end" navbar>
-            <NavItem>
-              <NavLink tag={Link} exact to="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/workshop">Workshop</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/project">Project</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/talk">Talk</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="#committee">Committee</NavLink>
-            </NavItem>
-          </NavStrap>
-        </Collapse>
-      </Navbar>
+          <Collapse isOpen={this.state.isOpen} navbar className="w-100">
+            <NavStrap className="ml-auto w-100 justify-content-end" navbar>
+              <NavItem className="nav-item">
+                <a href="/">
+                  <Typography color="primary">Home</Typography>
+                </a>
+              </NavItem>
+              <NavItem className="nav-item">
+                <a href="#workshop">
+                  <Typography color="primary">Workshop</Typography>
+                </a>
+              </NavItem>
+              <NavItem className="nav-item">
+                <a href="/project">
+                  <Typography color="primary">Project</Typography>
+                </a>
+              </NavItem>
+              <NavItem className="nav-item">
+                <a href="/talk">
+                  <Typography color="primary">Talk</Typography>
+                </a>
+              </NavItem>
+              <NavItem className="nav-item">
+                <a href="#committee">
+                  <Typography color="primary">Committee</Typography>
+                </a>
+              </NavItem>
+            </NavStrap>
+          </Collapse>
+        </Navbar>
+      </Scrollspy>
     );
   }
 }
